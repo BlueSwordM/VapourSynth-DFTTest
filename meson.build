@@ -31,7 +31,7 @@ endif
 libs = []
 
 if host_machine.cpu_family().startswith('x86')
-  add_project_arguments('-fno-math-errno', '-fno-trapping-math', '-DDFTTEST_X86', '-mfpmath=sse', '-msse2', language: 'cpp')
+  add_project_arguments('-fno-math-errno', '-fno-trapping-math', '-DDFTTEST_X86', '-mfpmath=sse', '-march=native', language: 'cpp')
 
   sources += [
     'DFTTest/DFTTest_SSE2.cpp',
